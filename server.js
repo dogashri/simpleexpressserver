@@ -6,4 +6,4 @@ const app=express()
 app.get('/',(req,res)=>{
     res.send('hello world')
 })
-app.listen(process.env.PORT,()=>(console.log("server started")))
+app.listen(process.env.PORT,()=>(console.log("server started"+process.env.PORT)))
