@@ -5,7 +5,13 @@ const app=express()
 
 app.get('/api/timestamp/:date_string?',(req,res)=>{
     let c=req.params.date_string
+    let k
+    if(isNaN(c)){
     let k=new Date(c)
+    }
+    else{
+        let k=new Date(parseInt(c))
+    }
     let dic={}
     dic.unix=k.getTime()
     dic.utc=k.toUTCString()
