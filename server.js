@@ -10,7 +10,7 @@ app.get('/api/timestamp/:date_string?',(req,res)=>{
     k=new Date(c)
     }
     else{
-        k=new Date(parseInt(c)*1000)
+        k=new Date(parseInt(c))
     }
     let dic={}
     dic.unix=k.getTime()
