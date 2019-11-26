@@ -12,6 +12,7 @@ app.get('/api/timestamp/:date_string?',(req,res)=>{
     else{
         k=new Date(parseInt(c))
     }
+    //abg
     let dic={}
     dic.unix=k.getTime()
     dic.utc=k.toUTCString()
